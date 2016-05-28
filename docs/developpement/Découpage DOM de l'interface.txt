@@ -1,0 +1,12 @@
+<div> conteneur générale engine.viewport
+	<div id="mouseEventListener" class="stage" />
+	<div id="stageId_stage" class="stage" style="display: none;"> conteneur de stage [stageId]
+		<div id="stageId_canvas" class="canvasContainer"></div>
+		... Contenu non canvas ...
+	</div>
+	... Autres conteneurs de stage ...
+	<div id="opacityShutter" class="stage" style="background-color: black;">
+    <div id="modalId_modal" class="modal" style="display: none;"> conteneur de modal [modalId]
+    ... Contenu du modal ...
+    </div>
+</div>

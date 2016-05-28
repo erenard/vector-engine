@@ -1,0 +1,36 @@
+Pour simplifier un peu le concept et revenir vers une IHM plus conventionelle.
+Le jeu va s'orienter vers une structure à la settlers
+
+Station Home: Conteneur et spatioport
+Possède beaucoup de ports de routages
+
+Station raffinerie:
+1 export allant au dépot le plus proche
+
+Station armement:
+0-1 import allant au dépot le plus proche
+
+IHM:
+barre latérale à droit avec bouttons de construction
+-Raffinerie
+-Relai electrique
+-Depot
+-Centrale electrique
+-Batterie
+
+Développement:
+1. Centrale electrique
+2. Relai
+3. Fils
+4.1 Raffinerie (consommateur d'electrique bidon)
+4.2 Raffinerie
+5. Depot
+6. settlers
+7.1 Canon
+
+Batiment d'exploitation d'une ressource:
+-Production
+-Transport vers le relai le plus proche
+
+Consomateur de ressource:
+-Stocke assez pour 2 ticks de consomation

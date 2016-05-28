@@ -1,0 +1,48 @@
+un nombre est associé à la génération de consommateurs d'une ressource
+
+1-consommatteurs finaux
+2-intermédiaires
+3-producteur
+
+1: Utilisateurs, les premiers servis
+2: Stockages, les deuxièmes servis
+3: Producteurs, jamais servis
+
+Type 2 :
+Stations éléctriques
+
+Type 1 :
+Tourelles
+
+I. Si pas de débit max:
+-Dijkstra sur tous les fournisseurs possible -> {noeud: (distance, quantité disponible)}
+Tant que le besoin du destinataire > 0 {
+	Boucle sur dijkstra par ordre de min(quantité disponible, débit max) décroissant {
+		-Transfert de min(besoin, min(quantité disponible, débit max))
+			-le destinataire est crédité instantanément
+			-le fournisseur est débité instantanément
+		Si le besoin du destinataire == 0 {
+			break;
+		}
+	}
+}
+
+II. Si débit max:
+-Dijkstra sur tous les fournisseurs possible -> {noeud: (distance, quantité disponible, débit max)}
+-Flager le dijkstra à dirty.
+Tant que le besoin du destinataire > 0 {
+	Si dijkstra == dirty {
+		dijkstra = ();
+	}
+	Boucle sur dijkstra par ordre de min(quantité disponible, débit max) décroissant {
+		-Transfert de min(besoin, min(quantité disponible, débit max))
+			-le destinataire est crédité instantanément
+			-les liens sont chargés instantanément
+			-le fournisseur est débité instantanément
+		-si le débit max est atteint, marqué le dijkstra dirty.
+		-si la quantité disponible est atteinte, marqué le dijkstra dirty.
+		Si le besoin du destinataire == 0 ou que le dijkstra == dirty {
+			break;
+		}
+	}
+}

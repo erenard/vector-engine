@@ -1,0 +1,181 @@
+I - Généralités
+	1 Concept
+		Jeu de strategie temps réel limité à l'économie et à la défense.
+		Pas d'unités controlables, uniquement des drones et des déployables.
+		Pas de batiments individuels, mais des stations comportants 4 à 8 slots.
+		Les déployables sont attachés à la station la plus proche.
+
+	2 Déroulement du mode survie
+		- Tier 1
+		Au départ peu de choix, les éléments les moins chers viendront à bout des premières vagues d'ennemis.
+		Energie: renouvelable
+		Défense: laser
+		- Tier 2
+		Les améliorations des lasers augmentant leur consommation d'énergie,
+		le joueur est obligé d'utiliser du minerai, soit comme projectile, soit comme combustible.
+		- Tier 3
+		Avec une économie bien rodée, les armes à guidage sont accessibles.
+		- Fin
+		-> Echec : Score basé sur le temps de survie.
+		-> Réussite : Score final basé sur le minerai restant après la défense,
+		de facon a récompenser les optimiseurs.
+
+	3 Déroulement de la campagne
+
+II - Ressources
+	1 Minerai
+		Extrait du layer de fond puis stocké et transporté de station en station.
+	2 Energie
+		Produite à partir de source renouvelable ou non-renouvelable (minerai),
+		puis transportée de station en station.
+		Les slots, et les déployables consomment 1 méga-watt (MW) d'énergie.
+		Les stations et les drones ne consomment pas d'énergie.
+
+III - Stations
+	De base les stations stockent un peu d'énergie et possèdent un système de visée de niveau 0.
+	pour les besoins des slots et déployables
+	Raffinerie: 2 slots de récolte, 1 slot de stockage, 1 slot de transport.
+	Défense spécialisée:
+			Missile: 1 slot armes à guidage, 3 slots système de visée.
+	1. Quartier général (4 slots)
+		Fourni au départ, 1 slot de stockage de minerai, 1 slot de récolte, 2 slots de spatioport.
+	2. Station (4 slots)
+	3. Super Station (6 slots)
+	4. Méga Station (8 slots)
+
+IV - Slots (et drones associés)
+	Les slots sont utilisé
+	1 Energie
+		1.1 Energie renouvelable
+			Production faible mais constante
+			1.1.1 Solaire
+				Cout: TBD crédits
+				Taille: 1 slot
+				Produit: TBD Amp
+		1.2 Energie non-renouvelable
+			Production forte dépendante de l'alimentation en combustible.
+			Blackout (cale et redémarre) si la consommation éxcède la production.
+			1.2.1	Minerai
+				Cout: TBD crédits
+				Taille: 1 slot
+				Produit: TBD Amp
+		1.3 Stockage
+			Evite les blackout, réponds à de forts besoin ponctuels
+			1.3.1 Batterie
+				Cout: TBD crédits
+				Taille: 1 slot
+				Capacité: TBD Amp
+		1.4 Transport
+			Emet l'énergie vers les stations voisines
+			1.4.1 Relai énergétique
+				Cout: TBD crédits
+				Taille: 1 slot
+				Produit: 1 lien d'émission vers une station
+				Débit: TBD Amp
+				Porté: TBD
+	2 Minerai
+		2.1 Récolte
+			Produit un drone de récolte et le pilote dans une porté limité autour de la station.
+			Le drone ne sort que si le stock local n'est pas plein.
+			Si le stock local est plein à sont retour il se pose et attends de pouvoir se vider.
+			Cout: TBD crédits
+			Taille: 1 slot
+			Capacité: TBD minerais
+			Consomme: TBD Amp
+			Produit: 1 drone de récolte
+			Porté: TBD
+		2.2 Stockage
+			Recoit les drones de transport et stocke le minerai.
+			Cout: TBD crédits
+			Taille: 1 slot
+			Capacité: TBD minerais
+		2.3 Transport
+			Produit un drone de transport et le pilote dans une porté limité autour de la station.
+			Une seule destination par slot de transport, fixée par le joueur.
+			Le drone à la capacité de deux drones de récolte.
+			Le drone ne sort que si le stockage de la destination n'est pas plein.
+			S'il est plein à l'arrivée il attends de pouvoir se vider.
+		2.4 Spatioport
+			Le spatioport transforme le minerai en crédits.
+			L'opération est manuelle, au joueur de déterminer le bon moment.
+	3 Défense
+		2.1 Armes énergetique (lasers)
+			Unique, permet de déployer des tourelles laser dans la zone d'influence de la station.
+			Stocke de l'énergie et la transporte vers les lasers attachés.
+		2.2 Armes de projection (canon)
+			Unique, permet de déployer des tourelles canon dans la zone d'influence de la station.
+			Stocke du minerai, le transforme en projectiles et alimente les canons attachés.
+		2.3 Armes à guidage (missile)
+			Unique, permet de déployer des lance-missiles.
+			Stocke du minerai, le transforme en missiles et alimente les lanceurs attachés.
+		2.4 Système de visée (tous)
+			Cumulable, augmente la porté des tourelles attachés.
+			Multiplie par un ratio la porté initiale de la tourelle.
+
+V - Tourelles (et projectiles associés)
+	Pour toutes les tourelles, les trois niveaux augmentent le rendement.
+	1 Laser (instant)
+		Le projectile coute TBD MW.
+		Niveau 1 - 100 Dps
+		Niveau 2 - 200 Dps
+		Niveau 3 - 400 Dps
+	2 Canon (projectile rapide)
+		Le projectile coute 10 minerais.
+		Niveau 1 - 1000 Dps
+		Niveau 2 - 2000 Dps
+		Niveau 3 - 3000 Dps (splash en bonus)
+	3 Missile (drone lent)
+		Le projectile coute 50 minerais et fait du splash.
+		Niveau 1 - 5000 Dps
+		Niveau 2 - 10000 Dps
+		Niveau 3 - 15000 Dps
+
+VI - Interface de jeu
+	1 Global
+		1.1 Souris
+			Le drag'n drop de la carte la fait défiller.
+			La molette zoom et dézoome la carte.
+			Pas de selection rectangulaire.
+		1.2 Clavier
+			La touche ESPACE fait pause.
+			Les touches AZERTY correspondent aux raccourcis des menus.
+	2 Déploiement
+		2.1 Menu
+			Ce menu apparait par défaut.
+		2.1 Eléments
+			A:Station
+			Z:Super Station
+			E:Méga Station
+			R:Tourelle Laser
+			T:Tourelle Canon
+			Y:Tourelle Missile
+		2.2 Déploiement de station
+			La carte affiche les limites des portés de transport autour des stations.
+		2.3 Déploiement de tourelle
+			La carte affiche les limites des portés de déploiement autour des stations.
+	3 Extention
+		3.1 Menu
+			Ce menu apparait lorsqu'une station est séléctionnée.
+		3.2 Eléments
+			ECHAP:Boutton qui deselectionne la station
+			A:Energie
+				ECHAP:Menu précedent
+				A:Energie renouvelable
+				Z:Energie non-renouvelable
+				E:Stockage
+				R:Transport
+			Z:Minerai
+				ECHAP:Menu précedent
+				A:Récolte
+				Z:Stockage
+				E:Transport
+			E:Défense
+				ECHAP:Menu précedent
+				A:Armes énergétique
+				Z:Armes de projection
+				E:Armes à guidage
+				R:Système de visée
+X - Reste à faire
+Dégats/Réparation des stations.
+XX - Idées
+Débloquer le tier 2 par une recherche sur l'enrichissement du minerai.

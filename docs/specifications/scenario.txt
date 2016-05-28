@@ -1,0 +1,11 @@
+un gros battlestar tombe en panne et doit survivre aux attaques de aliens locaux
+au départ on rtouve quelques ressources et le vaisseau peut se défendre
+les attaques augmentent et des défenses sont necessaires
+
+Les ressources sont en fait de la kryptonite qui incapacite le vaisseau.
+
+2 fins possibles: fuite ou extermination de l'ennemi
+
+fuite: récolter toutes les ressources
+
+extermination: butter un boss de la mort

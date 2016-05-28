@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="stages.css" />
+<script src="modernizr.js"></script>
+<script>
+window.onload = function () {
+	Modernizr.load([
+		{
+			load: ['engine.js', 'stages/title.js'],
+			complete: function () {
+				engine.viewport.initialize();
+				engine.animator.start();
+				engine.viewport.goToStage('title');
+			}
+		},
+		{
+			load: ['widget/minimap.js']
+		},
+		{
+			load: ['strategy/background.js', 'strategy/foreground.js', 'strategy/interface.js', 'strategy/model.js']
+		},
+		{
+			load: ['entity/mainCharacter.js']
+		},
+		{
+			load: ['stages/mainMenu.js', 'stages/options.js', 'stages/missions.js'],
+			complete: function () {
+				engine.viewport.goToStage('mainMenu');
+			}
+		}
+	]);
+}
+</script>
+</head>
+<body style="color: white; background-color: black;">
+<div id="game" style="width: 800px; height: 600px;">
+	<div id="mouseEventListener" class="stage">
+		<div id="title_stage" class="stage" style="display: none;">
+			<div id="title_canvas" class="canvasContainer"></div>
+			<div class="gameTitle">Megaman X</div>
+			<div class="title"><span style="font-size: 1.5em;">Loading...</span></div>
+		</div>
+		<div id="mainMenu_stage" class="stage" style="display: none;">
+			<div id="mainMenu_canvas" class="canvasContainer"></div>
+			<div class="gameTitle">Beyond frontier conqueror of the space</div>
+			<div id="mainMenu_main" class="title">
+                <button id="mainMenu_button_story">Story Mode</button><br/>
+				<button id="mainMenu_button_options">Settings</button><br/>
+			</div>
+			<div id="mainMenu_missions" class="title" style="display: none;">
+				<span style="font-size: 1.5em;">Story mode</span><br/>
+                <div id="mainMenu_missionbuttons" style="text-align: left;">
+                    <p>Select a mission:</p>
+                    <button id="mainMenu_mission1">1</button>&nbsp;
+                    <button id="mainMenu_mission2" disabled="disabled">2</button>&nbsp;
+                    <button id="mainMenu_mission3" disabled="disabled">3</button>&nbsp;
+                    <button id="mainMenu_mission4">4</button>&nbsp;
+                    <button id="mainMenu_mission5">5</button>
+                    <button id="mainMenu_mission6" disabled="disabled">6</button>&nbsp;
+                    <button id="mainMenu_mission7" disabled="disabled">7</button>&nbsp;
+                    <button id="mainMenu_mission8" disabled="disabled">8</button>&nbsp;
+                    <button id="mainMenu_mission9" disabled="disabled">9</button>&nbsp;
+                    <button id="mainMenu_mission10" disabled="disabled">10</button>
+                </div>
+				<button id="mainMenu_button_back">Back</button>
+			</div>
+		</div>
+		<div id="missions_stage" class="stage" style="display: none;">
+			<div id="missions_canvas" class="canvasContainer"></div>
+			<div id="missions_menu" class="menu">
+				<button id="missions_build">Build</button><br/>
+				<button id="missions_pop5reds">Pop 5 reds</button>
+			</div>
+			<div id="missions_buildMenu" class="menu" style="display: none;">
+				Build menu<br/>
+				<button id="missions_cancel">Cancel</button><br/>
+				<button id="missions_router">Router</button><br/>
+				Resources<br/>
+				<button id="missions_solar">Power</button><br/>
+				<button id="missions_cristal">Cristal</button>
+				<button id="missions_deuterium">Deuterium</button>
+				<button id="missions_metal">Metal</button>
+				<button id="missions_uranium">Uranium</button>
+				Factories<br/>
+				Weapons<br/>
+				<button id="missions_laser">Laser</button><br/>
+				<button id="missions_canon">Canon</button><br/>
+			</div>
+			<div class="minimapmenu">
+				<button id="missions_zoomIn" class="zoomIn"></button>
+				<button id="missions_zoomOut" class="zoomOut"></button>
+				<button id="missions_pause" class="pause"></button>
+				<button id="missions_speed" class="fastforward"></button>
+			</div>
+			<div id="missions_statusBar" class="statusBar">
+				<div id="missions_generalInformation" class="statusBarContainer"></div>
+				<div id="missions_selectedInformation" class="statusBarContainer" style="display: none;">
+					<div class="statusBarButtons">
+						<button id="missions_selectedInformation_button1">Button 1</button></br>
+						<button id="missions_selectedInformation_button2">Button 2</button></br>
+						<button id="missions_selectedInformation_button3">Button 3</button></br>
+					</div>
+					<div id="missions_selectedInformation_data" class="statusBarData"></div>
+				</div>
+				<div id="missions_minimap" class="minimap"></div>
+			</div>
+		</div>
+	</div>
+	<div id="opacityShutter" class="stage" style="background-color: black;">
+		<div id="options_modal" class="modal" style="display: none; top: 200px; left: 200px;">
+			<h1>Options</h1>
+			<p>Stars: 
+				<button id="options_100stars">25</button>
+				<button id="options_200stars">50</button>
+				<button id="options_400stars">100</button>
+			</p>
+			<p>Option 2</p>
+			<p>Option 3</p>
+			<button id="options_close" style="float: right;">Close</button>
+		</div>
+	</div>
+</div>
+<div id="fps" style="position: absolute; background-color: red;" />
+</body>
+</html>

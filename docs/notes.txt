@@ -1,0 +1,59 @@
+Missions:
+-Implementer le load/save.
+-Utiliser le save pour choisir la mission suivante.
+-Penser aux options.
+
+IHM:
+Icones de stocks sur les batiments et les points de transport
+-Missiles, Lasers, Bullets (de loin remplacé par un bloc de couleur)
+
+Construction:
+-Destruction d'un batiment
+-Cas d'impossibilité d'étendre le réseau
+-Interdire la coupure de liens
+
+Souris:
+-Ajouter le changement de curseur
+
+Routage:
+-Matériaux
+
+Options:
+-Auto level details
+
+Context 2d
+-fond terne,
+-cadre principal avec fond,
+-taille de base + taille par items
+-Objet page et objet item
+
+-Show Fps
+
+-Ecran des options
+-Tableau de bord à finir, ajouter le total d'énergie et le total de matière
+-Champs de ressources à exploiter
+-Tableau de bord contextuel sur la droite (contenant les infos de station)
+-Prévoir un clignotement possible pour le tutoriel
+-Interface de choix du destinataire d'une denrée
+-Représentation des flux d'alimentations
+-Chargement et sauvegarde
+-Barre de chargement
+-Objet station, stockage
+-Objet de deployable
+-Modules
+-Faire clignoter les bouttons 'enfoncés'
+-Rendre la molette transverse
+
+Tableau de bord de module:
+Taille unique
+-Titre
+-Bouton upgrade/build
+-Bouton action (place deployable par exemple)
+
+Missions
+1: Tutorial de base
+-Construction/deploiement
+
+Urls :
+-Fond du jeu : http://www.emanueleferonato.com/2007/06/06/95/
+http://www.beautifullife.info/web-design/25-best-space-scene-photoshop-tutorials/

@@ -1,0 +1,176 @@
+* {
+	font-family: Trebuchet MS;
+	font-size: 1em;
+}
+
+div#game {
+	border: solid 1px white;
+	/*background: transparent url('img/background.png') no-repeat scroll top right;*/
+	width: 800px;
+	height: 600px;
+}
+
+div.modal {
+	margin: 100px auto;
+    width: 400px;
+	background-color:#000000;
+	border:1px solid #00ff00;
+	/*display:inline-block;*/
+}
+
+div.stage {
+	position: absolute;
+	width: inherit;
+	height: inherit;
+}
+
+div.canvasContainer {
+	position: absolute;
+	width: inherit;
+	height: inherit;
+}
+
+div.mouseEventListener {
+	position: absolute;
+	width: inherit;
+	height: inherit;
+}
+
+div.gameTitle {
+	position: absolute;
+	width: inherit;
+	top: 10%;
+	font-size: 2.5em;
+	text-align: center;
+}
+
+div.title {
+	position: absolute;
+	text-align: center;
+	top: 40%;
+	left: 30%;
+	width: 40%;
+}
+
+div.minimap {
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	border-left: solid 1px white;
+	width: 151px;
+	height: 150px;
+	float: left;
+}
+
+div.minimapmenu {
+	position: absolute;
+	bottom: 167px;
+	right: 5px;
+}
+
+div.menu {
+	position: absolute;
+	top: 5px;
+	right: 5px;
+	width: 150px;
+}
+
+div.statusBar {
+	margin-top: 449px;
+	border-top: solid 1px white;
+}
+
+div.statusBarContainer {
+	position: relative;
+	margin: 0 150px 0 0;
+	padding: 5px 5px 5px 5px;
+	background-color: black;
+	height: 140px;
+}
+
+div.statusBarData {
+}
+
+div.statusBarButtons {
+	float: right;
+	position: relative;
+}
+
+button {
+	background: black;
+	border:1px solid #00ff00;
+	display:inline-block;
+	color:#00dd00;
+    /*
+	width:100%;
+	font-family:Trebuchet MS;
+	font-size:15px;
+	*/
+	font-weight:normal;
+	padding:6px 12px;
+	margin: 2px 0 2px 0;
+	text-decoration:none;
+	cursor: pointer;
+}
+button:hover {
+	background-color:#003300;
+}
+button:active {
+	position:relative;
+	top:1px;
+}
+button[disabled]{
+	color:#005500;
+	border:1px solid #005500;
+}
+button.zoomIn {
+	background: transparent url('img/magnifier_zoom_in.png') no-repeat scroll top right;
+	padding: 0 0 0 0;
+	border: 0;
+	width: 32px;
+	height: 32px;
+}
+button.zoomOut {
+	background: transparent url('img/magnifier_zoom_out.png') no-repeat scroll top right;
+	padding: 0 0 0 0;
+	border: 0;
+	width: 32px;
+	height: 32px;
+}
+button.pause {
+	background: transparent url('img/control_pause.png') no-repeat scroll top right;
+	padding: 0 0 0 0;
+	border: 0;
+	width: 32px;
+	height: 32px;
+}
+button.paused {
+	background: transparent url('img/control_pause_blue.png') no-repeat scroll top right;
+	padding: 0 0 0 0;
+	border: 0;
+	width: 32px;
+	height: 32px;
+}
+button.fastforward {
+	background: transparent url('img/control_fastforward.png') no-repeat scroll top right;
+	padding: 0 0 0 0;
+	border: 0;
+	width: 32px;
+	height: 32px;
+}
+button.fastforwarded {
+	background: transparent url('img/control_fastforward_blue.png') no-repeat scroll top right;
+	padding: 0 0 0 0;
+	border: 0;
+	width: 32px;
+	height: 32px;
+}
+div#mainMenu_missionbuttons button {
+	width: 50px;
+}
+div#mainMenu_main button {
+	width: 128px;
+}
+div.menu button {
+	width: 100%;
+}
